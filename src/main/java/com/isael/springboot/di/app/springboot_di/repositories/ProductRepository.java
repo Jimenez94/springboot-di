@@ -1,13 +1,15 @@
 package com.isael.springboot.di.app.springboot_di.repositories;
 
 import com.isael.springboot.di.app.springboot_di.models.Product;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
 
-@Component
-public class ProductRepository implements  IProductoRepository{
+
+@Repository("muchosProductos")
+public class ProductRepository implements IProductRepository {
     private List<Product> data;
     public ProductRepository() {
         this.data = Arrays.asList(

@@ -1,18 +1,21 @@
 package com.isael.springboot.di.app.springboot_di.services;
 
 import com.isael.springboot.di.app.springboot_di.models.Product;
-import com.isael.springboot.di.app.springboot_di.repositories.IProductoRepository;
+import com.isael.springboot.di.app.springboot_di.repositories.IProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
+@Service
 public class ProductService implements IProductoService {
 
     @Autowired
-    private IProductoRepository repository;
+    //@Qualifier("productRepositoryFoo")
+    //@Qualifier("muchosProductos")
+    private IProductRepository repository;
     public List<Product> fineAll() {
         return repository.fineAll().stream().map(p -> {
             Double priceTax = p.getPrice() * 1.25d;

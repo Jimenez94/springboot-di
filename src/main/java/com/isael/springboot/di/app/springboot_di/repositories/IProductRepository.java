@@ -4,7 +4,7 @@ import com.isael.springboot.di.app.springboot_di.models.Product;
 
 import java.util.List;
 
-public interface IProductoRepository {
+public interface IProductRepository {
     List<Product> fineAll();
     Product findById(Long id);
 }
