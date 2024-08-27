@@ -2,9 +2,7 @@ package com.isael.springboot.di.app.springboot_di.repositories;
 
 import com.isael.springboot.di.app.springboot_di.models.Product;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
