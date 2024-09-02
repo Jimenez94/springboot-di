@@ -7,8 +7,8 @@ import java.util.Collections;
 import java.util.List;
 
 
-@Primary
-@Repository("productFoo")
+//@Primary
+@Repository
 public class ProductRepositoryFoo implements IProductRepository{
     @Override
     public List<Product> fineAll() {
